@@ -20,6 +20,5 @@ const search =(arr, target, l, r) =>{
 const arr =[0,1,299,4,3,8,6,9,765] ;
 arr.sort((a,b)=> a-b);
 console.log(arr);
-
 // console.log(arr.length);
 console.log(search(arr,299,0,arr.length-1));
