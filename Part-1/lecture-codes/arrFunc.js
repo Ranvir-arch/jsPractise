@@ -24,3 +24,42 @@ const users = [
 users.forEach((user)=>{
     console.log(user.name);
 });
+
+// map method
+
+const newArr = arr.map((num, i)=>{
+    console.log(i);
+    return num**2;
+});
+console.log(arr, newArr);
+
+
+// filter method
+
+const newArr2 = arr.filter(num=>num%2===0);
+
+console.log(newArr2);
+
+// reduce method
+
+let sum = arr.reduce((accumulator, currentvalue)=>{
+    return accumulator+currentvalue;
+})
+
+console.log(sum);
+
+
+const cart = [
+    {id : 1, name : "Mobile", price : 16000},
+    {id : 2, name : "Laptop", price : 68000},
+    {id : 3, name : "Charger", price : 1500},
+    {id : 4, name : "Head phone", price : 2500},
+    {id : 5, name : "Mobile cover", price : 800},
+    {id : 6, name : "USB", price : 1200}
+];
+
+let checkout = cart.reduce((acc, curr)=>{
+    return acc + curr.price;
+},0);
+
+console.log(checkout);
