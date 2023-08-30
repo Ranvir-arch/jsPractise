@@ -1,11 +1,11 @@
 var filter = function(arr, fn) {
+    let ans = [];
     for(let i in arr){
-        console.log(!Boolean(fn(arr[i], Number(i))), arr[i]);
-        if(!Boolean(fn(arr[i], i))){
-            arr.splice(i,1);
+        if(Boolean(fn(arr[i], Number(i)))){
+            ans.push(arr[i]);
         }
     }
-    return arr;
+    return ans;
 };
 
 // let jklm = filter([1,2,3], (n,i)=> i===0);
